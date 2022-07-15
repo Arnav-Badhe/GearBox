@@ -447,12 +447,13 @@ difference(){
 	
 	translate([33,0,0])
 	cylinder(r=3.2,h=4,center=true);
-}*/
-/*
+}
+*/
 translate([0,0,18.25])
 rotate([0,90,0])
+
 motor();
-*/
+
 union(){
 	/*translate([33,0,20.35])
 	rotate([180,0,0])
@@ -460,33 +461,35 @@ union(){
 	
 	difference(){
 		union(){
-		translate([33,0,20.35])
+		translate([35,0,20.35])
 		rotate([180,0,0])
-		
-		greaThefinalonePrint();
-		translate([33,0,20.35])
+		greaThefinalone();
+		//greaThefinalonePrint();
+		translate([35,0,20.35])
 			genrateCollar(collar_height=4,collar_width=2,collar_radius=3,hole_Radius=2.7/2,hole_offset=2);
+			translate([19,0,11.2])
+			rotate([0,90,0])
+			rotate([0,0,180])
+	genrateCollar(collar_height=8,collar_width=2,collar_radius=3,hole_Radius=0,hole_offset=0);
+
 		}
-			translate([56,0,20.35])
-		cylinder(h=10,r=10,center=true);
 	
 	}
 	
 }
 
-	/*
-translate([33,0,35.5-6])
+
+translate([35,0,35.5-6])
 color("green") bearing();
 
 difference(){
 union(){
-		translate([33,0,-22])
+		translate([35,0,-22])
 			shaft(60);	
-		translate([33,0,35.5-9])
+		translate([35,0,35.5-9])
 			cylinder(h=3,r=5);	
 	}
-	translate([33,0,35.35-13])
+	translate([35,0,35.35-13])
 			rotate([0,90,0])
 			cylinder(h=10,r=2.7/2,center=true);
 }
-*/
